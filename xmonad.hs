@@ -13,6 +13,8 @@ myManageHook = composeAll
      , className =? "Pidgin"        --> doShift "1:pidgin"
      , className =? "Skype"         --> doShift "2:skype"
      , className =? "Terminator"    --> doShift "7:shell1"
+     , className =? "Unity-2d-panel" --> doIgnore
+     , className =? "Unity-2d-launcher" --> doIgnore
      , manageDocks
      , isFullscreen --> doFullFloat
      ]
@@ -29,4 +31,4 @@ main = xmonad $ gnomeConfig
                  , ("M-S-l", spawn "gnome-screensaver-command -l")
                  , ("M-p", spawn "kupfer")
                  ]
-				  
+
